@@ -74,6 +74,7 @@ public class CalendarController implements Route {
 
 		System.out.println(calendar);
 		response.header("Content-Disposition", "attachment;filename=cal.ics");
+		response.header("Content-Type", "text/calendar;charset=utf-8;");
 		return calendar.toString();
 	}
 }
